@@ -60,10 +60,13 @@ int main(void)
     int index = 0;
 
     char string[SIZE];
-
-    printf("Text: ");
     //scanf("%[^\n]", string);
-    fgets(string, SIZE-1, stdin);
+    do
+    {
+        printf("Text: ");
+        fgets(string, SIZE-1, stdin);
+    }
+    while (strlen(string) <= 1);
 
     int dlina = strlen(string);
 
